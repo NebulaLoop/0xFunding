@@ -1,7 +1,7 @@
 # 0xFunding เห็บวาฬ
 ## Funding Rate Trading Bot
 
-![0xFunding Bot](https://sdmntprwestus.oaiusercontent.com/files/00000000-3774-6230-8ee9-ed2c87a65939/raw?se=2025-04-22T09%3A21%3A22Z&sp=r&sv=2024-08-04&sr=b&scid=bdec3efc-cd85-5877-a0db-6cd1135709f0&skoid=51916beb-8d6a-49b8-8b29-ca48ed86557e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-22T04%3A33%3A57Z&ske=2025-04-23T04%3A33%3A57Z&sks=b&skv=2024-08-04&sig=2u88vP/nXUc%2Bmwe45oZxb0yeqkbkdW1RB8NK/OPo58g%3D)
+![0xFunding Bot](hepwan.png)
 
 ## Introduction
 
