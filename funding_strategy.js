@@ -11,8 +11,8 @@ const crypto = require('crypto'); // For signing API requests
 // !!! ใช้ API Key จาก .env เท่านั้น !!!
 const USE_TESTNET = false; // Set to true to use testnet, false to use real trading
 
-const BINANCE_API_KEY = process.env.BINANCE_API_KEY;
-const BINANCE_SECRET_KEY = process.env.BINANCE_SECRET_KEY;
+const BINANCE_API_KEY = "UQQmr0Qdis44fOJAudWhytEi2JKJZg4DHf8lR0DHMnDuooPtWTT8yZaw7GJpbUWM"
+const BINANCE_SECRET_KEY = "nKbMUdtvukWFWYLkZBwHLyw8uefqMkXCZP9ByC8PtA7V5V24YryUc7b2utIifcS1"
 
 // Base URLs for direct API calls
 const FUTURES_API_BASE = USE_TESTNET ? 'https://testnet.binancefuture.com' : 'https://fapi.binance.com';
@@ -36,15 +36,15 @@ const binance = new Binance().options({
 
 // --- Strategy Parameters ---
 const FUNDING_RATE_THRESHOLD = 0;  // 0 means include all negative rates
-const INVESTMENT_USD = 100;
+const INVESTMENT_USD = 20;
 const LEVERAGE = 10;
 const TAKE_PROFIT_PERCENT = 0.03;
-const STOP_LOSS_PERCENT = 0.01;
+const STOP_LOSS_PERCENT = 0.02;
 // New parameters for position timing
 const OPEN_POSITION_AFTER_FUNDING = true;  // Set to true to open position AFTER funding collection, false for BEFORE
-const ENTRY_SECONDS_OFFSET = 5;  // Seconds before or after funding time to enter position
+const ENTRY_SECONDS_OFFSET = 1;  // Seconds before or after funding time to enter position
 const CHECK_INTERVAL_MS = 10000;
-const TOP_LIST_COUNT = 10;
+const TOP_LIST_COUNT = 20;
 const MAKER_FEE = 0.0002;
 const TAKER_FEE = 0.0005;
 const EXECUTE_TRADES = true;  // Set to false to monitor only (no trades will be executed)
@@ -710,7 +710,7 @@ async function checkPositionStatus() {
 
 async function initialize() {
     console.log(chalk.bold.blue("===== Funding Rate Strategy Bot Initializing ====="));
-    if (!process.env.BINANCE_API_KEY || !process.env.BINANCE_SECRET_KEY) { 
+    if (!BINANCE_API_KEY || !process.env.BINANCE_SECRET_KEY) { 
         console.error(chalk.red.bold("ERROR: API Keys not found in .env file! Exiting.")); 
         process.exit(1); 
     }

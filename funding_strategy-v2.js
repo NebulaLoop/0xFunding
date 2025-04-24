@@ -17,12 +17,12 @@ const BINANCE_SECRET_KEY = process.env.BINANCE_SECRET_KEY;
 const FUTURES_API_BASE = USE_TESTNET ? 'https://testnet.binancefuture.com' : 'https://fapi.binance.com';
 
 // --- Strategy Parameters ---
-const POSITION_SIDE = 'LONG';
-const FUNDING_RATE_PREFERENCE = 'NEGATIVE';
+const POSITION_SIDE = 'SHORT';
+const FUNDING_RATE_PREFERENCE = 'POSITIVE';
 const FUNDING_RATE_THRESHOLD = -0.001;
 const INVESTMENT_USD = 300;
 const LEVERAGE = 10;
-const STOP_LOSS_PERCENT = 0.007;
+const STOP_LOSS_PERCENT = 0.006;
 const ENTRY_SECONDS_BEFORE_FUNDING = 10; // *** ใช้ 10 วินาที ***
 const CHECK_INTERVAL_MS = 10000; // 10 วินาที
 const TOP_LIST_COUNT = 10;
